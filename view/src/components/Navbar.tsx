@@ -4,19 +4,38 @@ import Sheet from './Sheet'
 
 export default function Navbar() {
   return (
-    <div className='flex items-center justify-between bg-white/20 h-12'>
-      <h2>Musify</h2>
-      <div className='flex gap-2'>
-        <Link to='/'>Home</Link>
-        <Link to='/recommended'>Recommended</Link>
-        <Link to='/trending'>Trending</Link>
+    <div className='flex items-center justify-between h-20'>
+      <div className='flex items-center gap-8'>
+        <h1 className='text-primary font-bold text-3xl'>Musify</h1>
+        <div className='hidden lg:flex gap-4'>
+          <Link
+            className='hover:text-primary'
+            to='/'
+          >
+            Home
+          </Link>
+          <Link
+            className='hover:text-primary'
+            to='/recommended'
+          >
+            Recommended
+          </Link>
+          <Link
+            className='hover:text-primary'
+            to='/trending'
+          >
+            Trending
+          </Link>
+        </div>
       </div>
-      <div className='flex items-center gap-4'>
+      <div className='flex items-center gap-3'>
         <input
-          className='border border-white/60 px-4 py-2 rounded'
+          className='border border-white/60 px-2 sm:px-4 py-1 font-sm text-dark/70  rounded'
           placeholder='search music here...'
         />
-        <User2 />
+        <div className='hidden lg:block'>
+          <User2 />
+        </div>
         <Sheet />
       </div>
     </div>

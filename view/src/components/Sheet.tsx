@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
+import { AlignRight, X } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Sheet() {
   const [isVisible, setIsVisible] = useState(false)
@@ -7,8 +9,8 @@ export default function Sheet() {
   const handleToggle = () => setIsVisible(!isVisible)
 
   const backdropVariants = {
-    open: { opacity: 1, zIndex: 10 },
-    close: { opacity: 0, zIndex: -1 }
+    open: { opacity: 1, zIndex: 0 },
+    close: { opacity: 0, zIndex: -999 }
   }
 
   const sheetVariants = {
@@ -25,12 +27,12 @@ export default function Sheet() {
   }
 
   return (
-    <>
+    <div className='lg:hidden'>
       <button
-        className='text-white font-bold'
+        className='text-white'
         onClick={handleToggle}
       >
-        open
+        <AlignRight />
       </button>
       <motion.div
         variants={backdropVariants}
@@ -43,24 +45,37 @@ export default function Sheet() {
           variants={sheetVariants}
           initial='close'
           animate={isVisible ? 'open' : 'close'}
-          className='fixed right-0 h-full w-2/3 bg-white shadow-lg overflow-auto p-6 md:p-8'
+          className='fixed right-0 z-50 h-full w-2/3 bg-white shadow-lg overflow-auto p-4'
         >
-          <div className='grid gap-2 w-fulld  text-primary font-bold text-2xl'>
-            <button
-              className='text-white bg-primary font-bold'
-              onClick={handleToggle}
+          <div className='grid gap-6 text-dark font-bold text-2xl'>
+            <div className='flex items-center justify-between'>
+              <h1 className='text-primary'>Musify</h1>
+              <X
+                className='size-6 text-primary font-bold'
+                onClick={handleToggle}
+              />
+            </div>
+            <Link
+              to='/'
+              title='Home'
             >
-              close
-            </button>
-            <p>sk dfsdkfj dskfjds</p>
-            <p>sk dfsdkfj dskfjds</p>
-            <p>sk dfsdkfj dskfjds</p>
-            <p>sk dfsdkfj dskfjds</p>
-            <p>sk dfsdkfj dskfjds</p>
-            <p>sk dfsdkfj dskfjds</p>
+              Home
+            </Link>
+            <Link
+              to='/recommended'
+              title='Recommended'
+            >
+              Recommended
+            </Link>
+            <Link
+              to='/trending'
+              title='Trendings'
+            >
+              Trendings
+            </Link>
           </div>
         </motion.div>
       </motion.div>
-    </>
+    </div>
   )
 }

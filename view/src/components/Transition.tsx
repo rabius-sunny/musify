@@ -8,7 +8,7 @@ export default function withTransition(component: ReactNode) {
       <motion.div
         initial={{ y: 20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 1 }}
       >
         {component}
       </motion.div>

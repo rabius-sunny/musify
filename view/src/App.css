@@ -4,10 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-dark text-white/80;
+    @apply bg-dark text-white/80 max-w-7xl mx-auto px-3 sm:px-4 xl:px-0;
   }
   main {
-    height: calc(100vh - 3rem);
+    height: calc(100vh - 5rem);
   }
   h1,
   h2 {
