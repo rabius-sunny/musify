@@ -38,7 +38,7 @@ export default function Sheet() {
         variants={backdropVariants}
         initial='close'
         animate={isVisible ? 'open' : 'close'}
-        className='fixed inset-0 bg-gray-900/75 backdrop-blur-sm transition-all duration-300 ease-in-out'
+        className='fixed inset-0 bg-gray-900/75 backdrop-blur-sm'
         onClick={handleToggle}
       >
         <motion.div

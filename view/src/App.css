@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-dark text-white/80 max-w-7xl mx-auto px-3 sm:px-4 xl:px-0;
+    @apply bg-dark text-white/60 max-w-7xl mx-auto px-3 sm:px-4 xl:px-0;
   }
   main {
     height: calc(100vh - 5rem);

@@ -7,7 +7,12 @@ export default function Navbar() {
   return (
     <div className='flex items-center justify-between h-20'>
       <div className='flex items-center gap-8'>
-        <h1 className='text-primary font-bold text-3xl'>Musify</h1>
+        <Link
+          to='/'
+          className='text-primary font-bold text-3xl'
+        >
+          Musify
+        </Link>
         <div className='hidden lg:flex gap-4'>
           <Link
             className='hover:text-primary'
