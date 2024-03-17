@@ -20,7 +20,7 @@ export default function App() {
           />
           <Route
             path='/recommended'
-            element={withTransition(<Recommended />)}
+            element={<Recommended />}
           />
           <Route
             path='/trending'

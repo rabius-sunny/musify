@@ -14,3 +14,16 @@
     @apply font-medium;
   }
 }
+
+.recommended {
+  height: calc(100vh - 10rem);
+  overflow: auto;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

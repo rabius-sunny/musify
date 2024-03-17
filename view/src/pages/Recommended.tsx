@@ -1,7 +1,23 @@
+import wave from 'assets/wave.png'
+import RecList from 'components/RecList'
+import withTransition from 'components/Transition'
+
 export default function Recommended() {
   return (
-    <div className='flex  items-center justify-center text-9xl'>
-      Recommended
+    <div className='relative'>
+      <div className='absolute w-full z-50'>
+        <h1 className='text-center text-cyan-400 text-xl sm:text-3xl h-16'>
+          Recommended musics for you
+        </h1>
+        {withTransition(<RecList />)}
+      </div>
+      <div className='fixed text-white bottom-0 right-0 z-0'>
+        <img
+          className='brightness-50'
+          src={wave}
+          alt='wave'
+        />
+      </div>
     </div>
   )
 }

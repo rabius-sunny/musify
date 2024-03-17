@@ -9,7 +9,7 @@ export default function Sheet() {
   const handleToggle = () => setIsVisible(!isVisible)
 
   const backdropVariants = {
-    open: { opacity: 1, zIndex: 0 },
+    open: { opacity: 1, zIndex: 999 },
     close: { opacity: 0, zIndex: -999 }
   }
 
@@ -69,9 +69,9 @@ export default function Sheet() {
             </Link>
             <Link
               to='/trending'
-              title='Trendings'
+              title='Trending'
             >
-              Trendings
+              Trending
             </Link>
           </div>
         </motion.div>

@@ -8,6 +8,7 @@ export default {
       primary: colors.rose[500],
       white: colors.white,
       slate: colors.slate,
+      cyan: colors.cyan,
       transparent: colors.transparent
     },
     extend: {}
