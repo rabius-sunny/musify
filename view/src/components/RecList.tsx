@@ -3,9 +3,9 @@ import { ChevronFirst, ChevronLast, Play, Repeat, Shuffle } from 'lucide-react'
 
 type TProps = {
   loading: boolean
-  musics?: { title: string }[]
+  musics: { title: string }[]
 }
-export default function RecList({ loading }: TProps) {
+export default function RecList({ loading, musics }: TProps) {
   return (
     <div className='recommended max-w-xl mx-auto p-3 md:p-5 bg-white/20 rounded-xl shadow-lg shadow-white/20 z-10 grid gap-2'>
       {loading &&
@@ -15,10 +15,10 @@ export default function RecList({ loading }: TProps) {
             className='h-24 rounded-lg animate-pulse bg-dark/40'
           />
         ))}
-      {!loading &&
-        [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((item) => (
+      {musics &&
+        musics.map((item, idx) => (
           <div
-            key={item}
+            key={idx}
             className='flex items-start gap-2 border border-white/20 rounded-lg p-2 md:p-4'
           >
             <img
@@ -28,12 +28,12 @@ export default function RecList({ loading }: TProps) {
             />
             <div className='w-full'>
               <h2 className='text-base font-light tracking-wide'>
-                Lorem ipsum dolor sit amet.
+                {item.title}
               </h2>
               <p className='text-[0.7rem] sm:text-xs uppercase font-medium tracking-widest'>
                 lorem ipsum
               </p>
-              <div className='flex items-center gap-14 mt-2'>
+              <div className='flex items-center gap-14 mt-5'>
                 <Shuffle className='size-5' />
                 <div className='flex gap-4'>
                   <ChevronFirst className='size-5' />

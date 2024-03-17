@@ -19,4 +19,13 @@ const searchMusic = async (req, res) => {
   }
 }
 
-module.exports = { createMusics, searchMusic }
+const getRecommendedMusics = async (req, res) => {
+  try {
+    const response = await musicSchema.find().skip(30).limit(10)
+    res.status(200).json({ message: 'ok', data: response })
+  } catch (error) {
+    res.status(404).json({ error, message: error.message })
+  }
+}
+
+module.exports = { createMusics, searchMusic, getRecommendedMusics }

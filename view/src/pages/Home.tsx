@@ -7,7 +7,7 @@ export default function Home() {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-x-8 gap-y-12 items-center'>
         <div className='text-center lg:text-start grid gap-8'>
           <h1 className='text-5xl text-white lg:text-7xl font-bold tracking-wide'>
-            Worlds best <span className='text-primary'>Music</span> only on{' '}
+            Worlds best <span className='text-primary'>Musics</span> only on{' '}
             <span className='text-primary'>Musify</span>
           </h1>
           <p className='md:text-xl'>
