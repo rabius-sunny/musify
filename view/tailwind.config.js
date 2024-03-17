@@ -7,7 +7,8 @@ export default {
       dark: '#0A183D',
       primary: colors.rose[500],
       white: colors.white,
-      slate: colors.slate
+      slate: colors.slate,
+      transparent: colors.transparent
     },
     extend: {}
   },

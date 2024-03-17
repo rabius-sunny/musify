@@ -1,6 +1,7 @@
 import { User2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import Sheet from './Sheet'
+import Search from './Search'
 
 export default function Navbar() {
   return (
@@ -29,10 +30,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className='flex items-center gap-3'>
-        <input
-          className='border border-white/60 px-2 sm:px-4 py-1 font-sm text-dark/70  rounded'
-          placeholder='search music here...'
-        />
+        <Search />
         <div className='hidden lg:block'>
           <User2 />
         </div>
