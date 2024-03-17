@@ -1,5 +1,6 @@
 import { User2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import Sheet from './Sheet'
 
 export default function Navbar() {
   return (
@@ -16,6 +17,7 @@ export default function Navbar() {
           placeholder='search music here...'
         />
         <User2 />
+        <Sheet />
       </div>
     </div>
   )

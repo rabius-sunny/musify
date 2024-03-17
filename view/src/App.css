@@ -9,4 +9,8 @@
   main {
     height: calc(100vh - 3rem);
   }
+  h1,
+  h2 {
+    @apply font-medium;
+  }
 }
