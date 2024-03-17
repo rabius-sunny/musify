@@ -9,7 +9,7 @@ export default function Recommended() {
         <h1 className='text-center text-cyan-400 text-xl sm:text-3xl h-16'>
           Recommended musics for you
         </h1>
-        {withTransition(<RecList />)}
+        {withTransition(<RecList loading={false} />)}
       </div>
       <div className='fixed text-white bottom-0 right-0 z-0'>
         <img
