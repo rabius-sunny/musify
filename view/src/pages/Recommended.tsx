@@ -12,8 +12,8 @@ export default function Recommended() {
   return (
     <div className='relative'>
       <div className='absolute w-full z-50'>
-        <h1 className='text-center text-cyan-400 text-xl sm:text-3xl h-16'>
-          Recommended musics for you
+        <h1 className='text-center text-xl sm:text-4xl h-16 text-white'>
+          Recommended <span className='text-primary'>musics</span> for you
         </h1>
         {withTransition(
           <RecList

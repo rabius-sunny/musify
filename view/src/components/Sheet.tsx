@@ -61,7 +61,7 @@ export default function Sheet() {
               <Link
                 key={idx}
                 title={item.title}
-                className={`hover:text-primary py-2 rounded px-4 ${
+                className={`hover:text-dark/60 py-2 rounded px-4 ${
                   pathname === item.href &&
                   'bg-primary text-white hover:text-white'
                 }`}

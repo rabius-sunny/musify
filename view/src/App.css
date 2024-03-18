@@ -19,11 +19,18 @@
   height: calc(100vh - 10rem);
   overflow: auto;
 }
+
+@media (min-width: 1024px) {
+  .trending {
+    height: calc(100vh - 11rem);
+    overflow: auto;
+  }
+}
 *::-webkit-scrollbar {
   display: none;
 }
 
-main {
+* {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }

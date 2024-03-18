@@ -2,6 +2,7 @@ import Navbar from 'components/Navbar'
 import withTransition from 'components/Transition'
 import Home from 'pages/Home'
 import Recommended from 'pages/Recommended'
+import SearchResult from 'pages/SearchResult'
 import Trending from 'pages/Trending'
 import { Routes, Route, useLocation } from 'react-router-dom'
 
@@ -26,6 +27,10 @@ export default function App() {
           <Route
             path='/trending'
             element={withTransition(<Trending />)}
+          />
+          <Route
+            path='/search/q/:searchKey'
+            element={<SearchResult />}
           />
         </Routes>
       </main>
