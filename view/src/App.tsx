@@ -4,6 +4,7 @@ import Home from 'pages/Home'
 import Recommended from 'pages/Recommended'
 import Trending from 'pages/Trending'
 import { Routes, Route, useLocation } from 'react-router-dom'
+
 export default function App() {
   const location = useLocation()
   return (

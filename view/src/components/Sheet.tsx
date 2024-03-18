@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { AlignRight, X } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import routes from '../routes'
 
 export default function Sheet() {
+  const { pathname } = useLocation()
   const [isVisible, setIsVisible] = useState(false)
 
   const handleToggle = () => setIsVisible(!isVisible)
@@ -55,24 +57,19 @@ export default function Sheet() {
                 onClick={handleToggle}
               />
             </div>
-            <Link
-              to='/'
-              title='Home'
-            >
-              Home
-            </Link>
-            <Link
-              to='/recommended'
-              title='Recommended'
-            >
-              Recommended
-            </Link>
-            <Link
-              to='/trending'
-              title='Trending'
-            >
-              Trending
-            </Link>
+            {routes.map((item, idx) => (
+              <Link
+                key={idx}
+                title={item.title}
+                className={`hover:text-primary py-2 rounded px-4 ${
+                  pathname === item.href &&
+                  'bg-primary text-white hover:text-white'
+                }`}
+                to={item.href}
+              >
+                {item.title}
+              </Link>
+            ))}
           </div>
         </motion.div>
       </motion.div>

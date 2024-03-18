@@ -1,9 +1,11 @@
 import { User2 } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import Sheet from './Sheet'
 import Search from './Search'
+import routes from '../routes'
 
 export default function Navbar() {
+  const { pathname } = useLocation()
   return (
     <div className='flex items-center justify-between h-20'>
       <div className='flex items-center gap-8'>
@@ -14,24 +16,18 @@ export default function Navbar() {
           Musify
         </Link>
         <div className='hidden lg:flex gap-4'>
-          <Link
-            className='hover:text-primary'
-            to='/'
-          >
-            Home
-          </Link>
-          <Link
-            className='hover:text-primary'
-            to='/recommended'
-          >
-            Recommended
-          </Link>
-          <Link
-            className='hover:text-primary'
-            to='/trending'
-          >
-            Trending
-          </Link>
+          {routes.map((item, idx) => (
+            <Link
+              key={idx}
+              title={item.title}
+              className={`hover:text-primary ${
+                pathname === item.href && 'text-primary'
+              }`}
+              to={item.href}
+            >
+              {item.title}
+            </Link>
+          ))}
         </div>
       </div>
       <div className='flex items-center gap-3'>
