@@ -5,7 +5,10 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
-    "start": "node app.js"
+    "start": "node app.js",
+    "client": "cd view && npm install",
+    "postinstall": "cd view && npm run build",
+    "install": "npm run client"
   },
   "author": "Rabius Sunny",
   "license": "ISC",
