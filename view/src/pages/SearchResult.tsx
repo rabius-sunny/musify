@@ -17,7 +17,6 @@ export default function SearchResult() {
         Results for <span className='text-primary pl-2'>{searchKey}</span>
       </h1>
       <RecList
-        search
         loading={isLoading}
         musics={data}
       />
