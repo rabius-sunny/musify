@@ -5,7 +5,7 @@
       "src": "view/*",
       "use": "@vercel/build",
       "config": {
-        "buildCommand": "npm run build"
+        "buildCommand": "vercel build"
       }
     },
     {
