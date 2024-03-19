@@ -1,4 +1,9 @@
-import { User2 } from 'lucide-react'
+import {
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton
+} from '@clerk/clerk-react'
 import { Link, useLocation } from 'react-router-dom'
 import Sheet from './Sheet'
 import Search from './Search'
@@ -33,7 +38,14 @@ export default function Navbar() {
       <div className='flex items-center gap-3'>
         <Search />
         <div className='hidden lg:block'>
-          <User2 />
+          <div>
+            <SignedOut>
+              <SignInButton />
+            </SignedOut>
+            <SignedIn>
+              <UserButton afterSignOutUrl='/' />
+            </SignedIn>
+          </div>
         </div>
         <Sheet />
       </div>
