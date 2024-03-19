@@ -7,25 +7,35 @@
 Clone the project
 
 ```bash
-  git clone https://github.com/rabius-sunny/musify.git
+git clone https://github.com/rabius-sunny/musify.git
 ```
 
 Go to the project directory
 
 ```bash
-  cd musify
+cd musify
+```
+
+Move environment files
+
+```bash
+mv .env.example .env
+```
+
+```bash
+cd view && mv .env.example .env
 ```
 
 Install dependencies
 
 ```bash
-  npm i
+npm i
 ```
 
 Start the server
 
 ```bash
-  npm start
+npm start
 ```
 
 Now you can view the project on your local machine at [http://localhost:3000](http://localhost:3000).
