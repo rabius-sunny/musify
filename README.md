@@ -26,10 +26,10 @@ mv .env.example .env
 cd view && mv .env.example .env
 ```
 
-Install dependencies
+Go to project root and Install dependencies
 
 ```bash
-npm i
+cd .. && npm i
 ```
 
 Start the server
