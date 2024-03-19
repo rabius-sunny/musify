@@ -5,12 +5,14 @@ import {
   UserButton
 } from '@clerk/clerk-react'
 import { Link, useLocation } from 'react-router-dom'
+
 import Sheet from './Sheet'
 import Search from './Search'
 import routes from '../routes'
 
 export default function Navbar() {
   const { pathname } = useLocation()
+
   return (
     <div className='flex items-center justify-between h-20'>
       <div className='flex items-center gap-8'>
